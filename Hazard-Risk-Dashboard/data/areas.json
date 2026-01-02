@@ -1,0 +1,129 @@
+{
+  "factory_name": "工业园区",
+  "factory_boundary": [
+    [50, 0], [150, 0], [200, 30], [200, 120], 
+    [150, 150], [50, 150], [0, 120], [0, 30]
+  ],
+  "areas": [
+    {
+      "code": "WASTEWATER",
+      "name": "废水处理",
+      "polygon": [[15, 35], [55, 35], [55, 65], [15, 65]],
+      "center": [35, 50],
+      "base_color": "#34495e",
+      "risk_weight": 0.8
+    },
+    {
+      "code": "UTILITIES",
+      "name": "公用工程",
+      "polygon": [[70, 25], [130, 25], [130, 55], [70, 55]],
+      "center": [100, 40],
+      "base_color": "#e67e22",
+      "risk_weight": 0.9
+    },
+    {
+      "code": "FINISHED_GOODS",
+      "name": "成品仓库",
+      "polygon": [[145, 35], [185, 35], [185, 65], [145, 65]],
+      "center": [165, 50],
+      "base_color": "#95a5a6",
+      "risk_weight": 0.6
+    },
+    {
+      "code": "ELECTROLYSIS",
+      "name": "电解车间",
+      "polygon": [[15, 70], [55, 70], [55, 105], [15, 105]],
+      "center": [35, 87],
+      "base_color": "#f39c12",
+      "risk_weight": 1.1
+    },
+    {
+      "code": "CONTROL_CENTER",
+      "name": "中控室",
+      "polygon": [[70, 60], [130, 60], [130, 100], [70, 100]],
+      "center": [100, 80],
+      "base_color": "#2ecc71",
+      "risk_weight": 0.5
+    },
+    {
+      "code": "EXTRACTION",
+      "name": "萃取车间",
+      "polygon": [[145, 70], [185, 70], [185, 105], [145, 105]],
+      "center": [165, 87],
+      "base_color": "#1abc9c",
+      "risk_weight": 1.0
+    },
+    {
+      "code": "NICKEL_COBALT",
+      "name": "镍钴车间",
+      "polygon": [[25, 110], [65, 110], [65, 140], [25, 140]],
+      "center": [45, 125],
+      "base_color": "#9b59b6",
+      "risk_weight": 1.2
+    },
+    {
+      "code": "RAW_MATERIAL",
+      "name": "原料仓库",
+      "polygon": [[80, 105], [120, 105], [120, 135], [80, 135]],
+      "center": [100, 120],
+      "base_color": "#3498db",
+      "risk_weight": 0.7
+    },
+    {
+      "code": "SULFURIC_ACID",
+      "name": "硫酸车间",
+      "polygon": [[135, 110], [175, 110], [175, 140], [135, 140]],
+      "center": [155, 125],
+      "base_color": "#e74c3c",
+      "risk_weight": 1.3
+    }
+  ],
+  "hazard_types": {
+    "电气安全": {
+      "weight": 0.22,
+      "subtypes": ["临时用电", "配电箱隐患", "接地不良", "线路老化", "漏电保护失效"],
+      "subtype_weights": [0.35, 0.25, 0.15, 0.15, 0.10]
+    },
+    "消防安全": {
+      "weight": 0.18,
+      "subtypes": ["灭火器过期", "消防通道堵塞", "烟感故障", "消防栓问题", "应急照明故障"],
+      "subtype_weights": [0.30, 0.30, 0.15, 0.15, 0.10]
+    },
+    "机械安全": {
+      "weight": 0.12,
+      "subtypes": ["防护罩缺失", "设备故障", "传动部件裸露", "紧急停止失效"],
+      "subtype_weights": [0.35, 0.30, 0.20, 0.15]
+    },
+    "化学品安全": {
+      "weight": 0.15,
+      "subtypes": ["泄漏风险", "标识缺失", "存储不当", "MSDS缺失", "混存问题"],
+      "subtype_weights": [0.25, 0.25, 0.20, 0.15, 0.15]
+    },
+    "行走安全": {
+      "weight": 0.15,
+      "subtypes": ["地面湿滑", "通道障碍", "照明不足", "护栏缺失", "台阶损坏"],
+      "subtype_weights": [0.30, 0.25, 0.20, 0.15, 0.10]
+    },
+    "特种设备": {
+      "weight": 0.05,
+      "subtypes": ["压力容器超期", "起重机械问题", "叉车违规", "锅炉隐患"],
+      "subtype_weights": [0.30, 0.30, 0.25, 0.15]
+    },
+    "个人防护": {
+      "weight": 0.08,
+      "subtypes": ["PPE佩戴不规范", "防护用品缺失", "防护用品损坏"],
+      "subtype_weights": [0.50, 0.30, 0.20]
+    },
+    "作业安全": {
+      "weight": 0.05,
+      "subtypes": ["高处作业违规", "受限空间问题", "动火作业隐患", "吊装作业问题"],
+      "subtype_weights": [0.35, 0.25, 0.25, 0.15]
+    }
+  },
+  "risk_levels": {
+    "High": {"weight": 0.05, "score_range": [8, 10], "color": "#e74c3c"},
+    "Medium": {"weight": 0.25, "score_range": [4, 7], "color": "#f39c12"},
+    "Low": {"weight": 0.70, "score_range": [1, 3], "color": "#2ecc71"}
+  }
+}
+

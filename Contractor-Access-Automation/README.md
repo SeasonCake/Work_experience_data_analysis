@@ -52,25 +52,25 @@ This system automates the entire access control workflow, reducing manual verifi
 
 ```
 Contractor-Access-Automation/
-├── README.md                 # Project documentation
-├── STRUCTURE.md              # Detailed structure description
-├── LICENSE                   # MIT License
-├── requirements.txt          # Python dependencies
-├── main.py                   # Main entry point
+├── README.md                         # Project documentation
+├── LICENSE                           # MIT License
+├── requirements.txt                  # Python dependencies
+├── main.py                           # Main entry point
+├── contractor_analysis_demo.ipynb    # Jupyter Notebook demo
 │
-├── src/                      # Source code
-│   ├── data_generator.py     # Data simulation module (~620 lines)
-│   ├── access_control.py     # Core validation engine (~485 lines)
-│   ├── dashboard.py          # Dashboard generator (~1060 lines)
-│   └── ocr_simulator.py      # OCR simulation module (~200 lines)
+├── src/                              # Source code
+│   ├── data_generator.py             # Data simulation module
+│   ├── access_control.py             # Core validation engine
+│   ├── dashboard.py                  # Dashboard generator
+│   └── ocr_simulator.py              # OCR simulation module
 │
-├── data/                     # Data files (auto-generated)
+├── data/                             # Data files (auto-generated)
 │   ├── simulated_contractors.xlsx
 │   ├── blacklist.xlsx
 │   ├── training_records.xlsx
 │   └── entry_exit_records.xlsx
 │
-└── outputs/                  # Generated reports
+└── outputs/                          # Generated reports
     ├── dashboard_*.html
     ├── qualified_personnel_*.xlsx
     ├── alert_log_*.xlsx
