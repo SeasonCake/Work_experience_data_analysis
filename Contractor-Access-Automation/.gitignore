@@ -26,9 +26,10 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
-# Generated outputs
-outputs/*.html
-outputs/*.xlsx
+# Generated outputs (exclude timestamped files, keep examples)
+outputs/*_2*.html
+outputs/*_2*.xlsx
+!outputs/*_example.*
 !outputs/.gitkeep
 
 # OS

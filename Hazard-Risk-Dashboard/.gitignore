@@ -37,9 +37,10 @@ env/
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# Generated outputs (keep example)
-outputs/*.html
-outputs/*.xlsx
+# Generated outputs (exclude timestamped files, keep examples)
+outputs/*_2*.html
+outputs/*_2*.xlsx
+!outputs/*_example.*
 !outputs/.gitkeep
 
 # Data files (large/generated)
